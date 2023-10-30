@@ -1,5 +1,6 @@
 # PyTestPulse
 This is test discovery tool which searches for tests executes them and displays result, which you can run inside your python script or launch gui app in **pytestdemoapp** folder. Repository contains 3 directories pytestdemoapp, pytestpulse and unit_tests. **pytestdemoapp** is gui application for using pytestpulse tool in action. **unit_tests** folder are sample tests that you can run to see pytestpulse result.
+To install tool you need to navigate to `pytestpulse` directory and then type `pip install .`.
 To simply use pytestpulse tool in your python scripts:
 ```python
 from pytestpulse.unit_tests_executor import execute

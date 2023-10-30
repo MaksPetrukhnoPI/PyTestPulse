@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytestpulse"
+version = "0.0.1"
+authors = [
+    { name="Maksym Petrukhno", email="maxim.petrukhno@postindustria.com" },
+]
+description = "Test discovery tool"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/MaksPetrukhnoPI/PyTestPulse.git"
