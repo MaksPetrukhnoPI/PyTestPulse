@@ -1,0 +1,8 @@
+Test;Status;Error cause
+test_multiplication (fail_success_test.FaiSuccessTests.test_multiplication);OK;
+test_zero_division_error_is_thrown (fail_success_test.FaiSuccessTests.test_zero_division_error_is_thrown);Fail;"Traceback (most recent call last):  File ""/Users/maksimus/IdeaProjects/PyTestPulse/unit_tests/fail_success_test.py"", line 8, in test_zero_division_error_is_thrown    with self.assertRaises(ZeroDivisionError):AssertionError: ZeroDivisionError not raised"
+test_multiplication (test_success.SuccessfulTest.test_multiplication);OK;
+test_zero_division_error_is_thrown (test_success.SuccessfulTest.test_zero_division_error_is_thrown);OK;
+test_multiplication (test_fail.FailingTest.test_multiplication);Fail;"Traceback (most recent call last):  File ""/Users/maksimus/IdeaProjects/PyTestPulse/unit_tests/test_fail.py"", line 5, in test_multiplication    self.assertEqual(5 * 5, 35)AssertionError: 25 != 35"
+test_zero_division_error_is_thrown (test_fail.FailingTest.test_zero_division_error_is_thrown);Fail;"Traceback (most recent call last):  File ""/Users/maksimus/IdeaProjects/PyTestPulse/unit_tests/test_fail.py"", line 7, in test_zero_division_error_is_thrown    with self.assertRaises(ZeroDivisionError):AssertionError: ZeroDivisionError not raised"
+Execution Time = 0.0

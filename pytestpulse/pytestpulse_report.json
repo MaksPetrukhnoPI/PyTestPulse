@@ -1,0 +1,45 @@
+[
+    {
+        "tests_file_name": "fail_success_test.py",
+        "tests_result": {
+            "passed_tests": [
+                "test_multiplication (fail_success_test.FaiSuccessTests.test_multiplication)"
+            ],
+            "failed_tests": [
+                {
+                    "test_zero_division_error_is_thrown (fail_success_test.FaiSuccessTests.test_zero_division_error_is_thrown)": "Traceback (most recent call last):\n  File \"/Users/maksimus/IdeaProjects/PyTestPulse/unit_tests/fail_success_test.py\", line 8, in test_zero_division_error_is_thrown\n    with self.assertRaises(ZeroDivisionError):\nAssertionError: ZeroDivisionError not raised"
+                }
+            ]
+        },
+        "tests_status": "FAILED",
+        "tests_exec_time": 0.0
+    },
+    {
+        "tests_file_name": "test_success.py",
+        "tests_result": {
+            "passed_tests": [
+                "test_multiplication (test_success.SuccessfulTest.test_multiplication)",
+                "test_zero_division_error_is_thrown (test_success.SuccessfulTest.test_zero_division_error_is_thrown)"
+            ],
+            "failed_tests": []
+        },
+        "tests_status": "OK",
+        "tests_exec_time": 0.0
+    },
+    {
+        "tests_file_name": "test_fail.py",
+        "tests_result": {
+            "passed_tests": [],
+            "failed_tests": [
+                {
+                    "test_multiplication (test_fail.FailingTest.test_multiplication)": "Traceback (most recent call last):\n  File \"/Users/maksimus/IdeaProjects/PyTestPulse/unit_tests/test_fail.py\", line 5, in test_multiplication\n    self.assertEqual(5 * 5, 35)\nAssertionError: 25 != 35"
+                },
+                {
+                    "test_zero_division_error_is_thrown (test_fail.FailingTest.test_zero_division_error_is_thrown)": "Traceback (most recent call last):\n  File \"/Users/maksimus/IdeaProjects/PyTestPulse/unit_tests/test_fail.py\", line 7, in test_zero_division_error_is_thrown\n    with self.assertRaises(ZeroDivisionError):\nAssertionError: ZeroDivisionError not raised"
+                }
+            ]
+        },
+        "tests_status": "FAILED",
+        "tests_exec_time": 0.001
+    }
+]
