@@ -1,7 +1,10 @@
-import csv, json, xml.dom.minidom
+import csv
+import json
+import xml.dom.minidom
 import xml.etree.ElementTree as ET
 from abc import ABC, abstractmethod
-from logger import logger
+
+from pytestpulse.logger import logger
 
 
 class ReportFormat(ABC):
@@ -91,7 +94,7 @@ class CsvFormat(ReportFormat):
                         + ['Fail' for report in report.tests_result['failed_tests']])
         # parse tests error cause
         error_cause = ([None for _ in report.tests_result['passed_tests']]
-                       + list(map(lambda test: list(test.values())[0], report.tests_result['failed_tests'])))
+                       + list(map(lambda test: list(test.values())[0].replace('\n', ''), report.tests_result['failed_tests'])))
         # return dict with tests results and its exec time
         return {
             'tests': list(zip(tests, tests_status, error_cause)),

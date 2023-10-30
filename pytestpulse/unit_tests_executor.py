@@ -2,8 +2,8 @@
 import os
 import re
 import subprocess
-from logger import logger
-from tests_report import TestsReport
+from pytestpulse.logger import logger
+from pytestpulse.tests_report import TestsReport
 
 
 def execute(path, report_formatter=None, save_to_file=False, reports_save_dir=os.getcwd()):
@@ -61,7 +61,8 @@ def _parse_report(output, file):
     tests_time = float(re.findall("tests in (.*?)s", output)[0])
     tests_status = re.findall(r"\bFAILED|OK\b", output)[0]
     tests_result = _parse_tests_result(output, passed_tests, failed_tests)
-    return TestsReport(tests_file_name=file, tests_result=tests_result, tests_exec_time=tests_time, tests_status=tests_status)
+    return TestsReport(tests_file_name=file, tests_result=tests_result, tests_exec_time=tests_time,
+                       tests_status=tests_status)
 
 
 def _parse_tests_result(output, passed_tests, failed_tests):

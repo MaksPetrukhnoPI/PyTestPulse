@@ -1,0 +1,6 @@
+setuptools~=68.2.2
+pip~=23.2.1
+wheel~=0.41.2
+packaging~=23.2
+darkdetect~=0.8.0
+customtkinter~=5.2.1
