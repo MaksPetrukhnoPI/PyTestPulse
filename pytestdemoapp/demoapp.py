@@ -23,7 +23,7 @@ class App(ctk.CTk):
         execute_button = ctk.CTkButton(self, text="Execute", command=self.run_pytestpulse)
         execute_button.grid(row=1, column=0, padx=(10, 0), pady=(10, 10), sticky="nsew", columnspan=2)
         self.reports_text_box = ctk.CTkTextbox(self, height=400)
-        self.reports_text_box.grid(row=2, column=0, padx=(10, 0), pady=(10, 10), sticky="nsew", columnspan=2)
+        self.table_frame = ctk.CTkScrollableFrame(self, height=400, border_width=1)
 
     def run_pytestpulse(self):
         unit_tests_executor.execute(self.tests_dir_entry.get(), self.__get_report_format(), True)
@@ -82,7 +82,6 @@ class App(ctk.CTk):
 
     def __display_csv(self, f):
         self.reports_text_box.grid_forget()
-        self.table_frame = ctk.CTkScrollableFrame(self, height=400, border_width=1)
         self.table_frame.grid(row=2, column=0, padx=(10, 0), pady=(10, 10), sticky="nsew", columnspan=2)
         reader = csv.reader(f, delimiter=';')
         data = list(reader)

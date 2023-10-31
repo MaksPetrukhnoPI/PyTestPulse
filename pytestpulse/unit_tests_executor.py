@@ -30,7 +30,7 @@ def find_unit_tests_files(path):
 
 def execute_unit_tests(file):
     logger.info(f'Executing tests in {file}...')
-    command = ["python", "-m", "unittest", "-v", file]
+    command = ["python3", "-m", "unittest", "-v", file]
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return process.communicate()
 
